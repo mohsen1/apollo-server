@@ -21,6 +21,7 @@
   "dependencies": {
     "@apollo/federation": "file:../apollo-federation",
     "apollo-env": "^0.5.1",
+    "apollo-engine-reporting-protobuf": "file:../apollo-engine-reporting-protobuf",
     "apollo-graphql": "^0.3.3",
     "apollo-server-caching": "file:../apollo-server-caching",
     "apollo-server-core": "file:../apollo-server-core",

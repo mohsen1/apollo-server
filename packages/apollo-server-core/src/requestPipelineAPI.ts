@@ -18,6 +18,7 @@ import {
   GraphQLError,
 } from 'graphql';
 import { KeyValueCache } from 'apollo-server-caching';
+import { Trace } from 'apollo-engine-reporting-protobuf';
 
 type Mutable<T> = { -readonly [P in keyof T]: T[P] };
 
@@ -51,11 +52,14 @@ export interface GraphQLResponse {
 }
 
 export interface GraphQLRequestMetrics {
+  captureTraces?: boolean;
   persistedQueryHit?: boolean;
   persistedQueryRegister?: boolean;
   responseCacheHit?: boolean;
   forbiddenOperation?: boolean;
   registeredOperation?: boolean;
+  startHrTime?: [number, number];
+  queryPlanTrace?: Trace.QueryPlanNode;
 }
 
 export interface GraphQLRequestContext<TContext = Record<string, any>> {
