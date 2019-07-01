@@ -4,7 +4,7 @@ import { GraphQLResolverMap } from 'apollo-graphql';
 export const name = 'accounts';
 export const typeDefs = gql`
   extend type Query {
-    user(id: ID!): User
+    user(id: ID! = "1"): User
     me: User
   }
 
