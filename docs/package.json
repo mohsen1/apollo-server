@@ -2,10 +2,14 @@
   "scripts": {
     "start": "rm -rf .cache && gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
-    "gatsby": "2.11.6",
-    "gatsby-theme-apollo-docs": "1.0.15"
-  }
+    "gatsby": "3.7.0",
+    "gatsby-theme-apollo-docs": "6.0.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
